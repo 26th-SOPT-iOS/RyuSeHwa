@@ -20,5 +20,5 @@
 
 #### 👉🏻 [Week 1 (4/18)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/README_1.md)
 
-#### 👉🏻 Week 2 (4/25)
+#### 👉🏻 [Week 2 (4/25)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/README_2.md)
 
