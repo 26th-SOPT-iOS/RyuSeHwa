@@ -13,20 +13,29 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var enterID: UITextField!
     @IBOutlet weak var enterPW: UITextField!
     
+    @IBOutlet var finishButton: [UIButton]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setLayout()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func transferData(_ sender: Any) {
-        guard let receiveViewController = self.storyboard?.instantiateViewController(identifier: "loginViewController") as? LoginViewController else { return }
-        
-        receiveViewController.id = enterID.text
-        receiveViewController.pw = enterPW.text
-        self.present(receiveViewController, animated: true, completion: {if let navController = self.navigationController {
-        navController.popViewController(animated: true)
-    }}) // completion: return to the main page by 'popViewController'
+    func setLayout() {
+        finishButton.forEach({
+            $0.layer.cornerRadius = $0.layer.frame.size.height * 0.5
+        })
+//
+//    @IBAction func transferData(_ sender: Any) {
+//        guard let receiveViewController = self.storyboard?.instantiateViewController(identifier: "loginViewController") as? LoginViewController else { return }
+//
+//        receiveViewController.id = enterID.text
+//        receiveViewController.pw = enterPW.text
+//        self.present(receiveViewController, animated: true, completion: {if let navController = self.navigationController {
+//        navController.popViewController(animated: true)
+//    }}) // completion: return to the main page by 'popViewController'
     
     }
 
