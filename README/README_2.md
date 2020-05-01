@@ -15,3 +15,35 @@
 3. Size Inspector에서 Constraint 확인해주고 Proportion 체크해주기
 4. 알맞게 Contraint가 설정되었을때는 위의 사진처럼 파랗게 뜬다!
 
+
+
+### 과제 1: 계산기 만들기
+
+<img src="https://user-images.githubusercontent.com/46921003/80783469-e294d400-8bb4-11ea-842a-0af2351a07d8.png" alt="Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-01 at 11 27 33" style="zoom:20%;" />
+
+1. Vertical Stack 생성 후 오토레이아웃 설정
+2. Fill Equally 선택 후 Horizontal Stack 네개 배치
+3. Horizontal Stack 안에 버튼 네개 배치
+
+- 계산기 버튼 둥글게 만들기
+
+```swift
+@IBOutlet var digitButton: [UIButton]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    
+    func setLayout(){
+        digitButton.forEach({
+            $0.layer.cornerRadius = $0.layer.frame.size.height  * 0.5
+        })
+    }
+```
+
+
+
+### 과제 2: SOPT 로그인 화면 + ScrollView
+
