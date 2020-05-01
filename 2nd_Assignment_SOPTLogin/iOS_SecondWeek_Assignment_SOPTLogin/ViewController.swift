@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         joinButton.forEach({
             $0.layer.cornerRadius = $0.layer.frame.size.height * 0.5
         })
-    }
+}
+}
 //    @IBAction func transferData(_ sender: Any) {
 //        guard let receiveViewController = self.storyboard?.instantiateViewController(identifier: "loginViewController") as? LoginViewController else { return }
 //
@@ -33,6 +34,6 @@ class ViewController: UIViewController {
 //        navController.popViewController(animated: true)
 //            }})
     
-}
+
     
 
