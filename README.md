@@ -1,6 +1,6 @@
 # Ryu Sehwa
 
-🌸SOPT iOS 26th YB🌸
+🌸 SOPT iOS 26th YB 🌸
 
 
 
