@@ -15,6 +15,7 @@
 		011B7350245AA74600F7A22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011B734E245AA74600F7A22D /* LaunchScreen.storyboard */; };
 		011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B7359245AAD4500F7A22D /* JoinViewController.swift */; };
 		011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B735B245AADB200F7A22D /* LoginViewController.swift */; };
+		017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AD4492468261E0068EB11 /* KakaotalkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		011B7351245AA74600F7A22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011B7359245AAD4500F7A22D /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		011B735B245AADB200F7A22D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		017AD4492468261E0068EB11 /* KakaotalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaotalkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				011B7351245AA74600F7A22D /* Info.plist */,
 				011B7359245AAD4500F7A22D /* JoinViewController.swift */,
 				011B735B245AADB200F7A22D /* LoginViewController.swift */,
+				017AD4492468261E0068EB11 /* KakaotalkViewController.swift */,
 			);
 			path = iOS_SecondWeek_Assignment_SOPTLogin;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				011B7344245AA74600F7A22D /* AppDelegate.swift in Sources */,
 				011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */,
 				011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */,
+				017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */,
 				011B7346245AA74600F7A22D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

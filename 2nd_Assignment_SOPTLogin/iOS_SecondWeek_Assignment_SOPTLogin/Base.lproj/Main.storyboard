@@ -546,6 +546,36 @@
             </objects>
             <point key="canvasLocation" x="2613.04347826087" y="215.625"/>
         </scene>
+        <!--Kakaotalk View Controller-->
+        <scene sceneID="kLG-EI-Oek">
+            <objects>
+                <viewController id="KGC-WB-MWZ" customClass="KakaotalkViewController" customModule="iOS_SecondWeek_Assignment_SOPTLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mO6-Lv-OvN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v3E-7P-Hzo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v3E-7P-Hzo" firstAttribute="leading" secondItem="ctt-Ml-ldq" secondAttribute="leading" id="Jrb-mZ-LWw"/>
+                            <constraint firstItem="v3E-7P-Hzo" firstAttribute="trailing" secondItem="ctt-Ml-ldq" secondAttribute="trailing" id="j2W-KN-GdZ"/>
+                            <constraint firstItem="ctt-Ml-ldq" firstAttribute="bottom" secondItem="v3E-7P-Hzo" secondAttribute="bottom" id="uh9-jj-vUO"/>
+                            <constraint firstItem="v3E-7P-Hzo" firstAttribute="top" secondItem="ctt-Ml-ldq" secondAttribute="top" id="zPW-Fx-MnA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ctt-Ml-ldq"/>
+                    </view>
+                    <connections>
+                        <outlet property="katalkTableView" destination="v3E-7P-Hzo" id="stR-Ve-QDz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYa-Sz-KB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.8985507246377" y="1082.8125"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mEJ-Nu-SlH">
             <objects>
