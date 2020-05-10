@@ -2,7 +2,7 @@
 
 ### 세미나
 
-Delegate Pattern & Protocol
+▶️ Delegate Pattern & Protocol
 
 - Delegate Pattern (대리자 위임자): 뷰의 일부 기능을 다른 컨트롤러에 넘기는 것
   - <u>*대신 처리해줄 객체*</u>와 *<u>처리하라고 시키는 객체</u>*를 기억하면 됨
@@ -22,13 +22,16 @@ extension ViewController: UIPickerViewDelegate {  // 뷰의 기능 위임
 
 
 
-<u>PickerView, TableView, CollectionView 구현 방법은 큰 틀에서는 비슷한 순서를 따른다!!</u>
+<u>▶️ PickerView, TableView, CollectionView 구현 방법은 큰 틀에서는 비슷한 순서를 따른다!!</u>
 
 1. UI요소를 ViewController에 끌어와 준 후 기본적인 오토레이아웃을 잡아준다.
 2. 새로운 Swift파일 생성 후 후에 입력될 데이터들에 대한 코드 작성을 해준다. ViewController에서 해당 클래스/구조체에 대한 선언을 해준다.
 3. ViewController에서 새로운 function에 가지고 있는 데이터를 작성해준다.
 4. ViewController에서 추가한 프로토콜 **DataSource**에서 UIView에 **들어갈 값에 대한 정의**를 해준다. ( 예) 행의 갯수, 높이 등 )
-5. ViewController에서 추가한 프로토콜 **Delegate**에서 UIView에서 **이벤트가 발생할 때 어떻게 처리할지에 대한 정의**를 해준다. ( 예) touchEvent 등 )
+5. ViewController에서 추가한 프로토콜 **Delegate**에서 UIView에서 **이벤트가 발생할 때 어떻게 처리할지에 대한 정의**를 해준다. ( 예) Touch Event 등 )
+6. 완성!!
+
+
 
 
 
