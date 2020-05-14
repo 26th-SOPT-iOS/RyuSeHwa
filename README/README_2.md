@@ -4,11 +4,13 @@
 
 - Tabbar Controller
 
-- 오토레이아웃: View의 위치와 크기를 자동으로 결정하는 Layout System
+<img width="300" alt="Screen Shot 2020-05-10 at 9 56 25 PM" src="https://user-images.githubusercontent.com/46921003/81499816-2603e680-9309-11ea-9b29-a4ff3cb0df8c.png">
+
+- 오토레이아웃: View의 위치와 크기를 자동으로 결정하는 Layout System (매우 중요함)
 
 <img width="251" alt="2nd_AutoLayout" src="https://user-images.githubusercontent.com/46921003/80296448-52bae880-87b6-11ea-84b9-33b53700c2fc.png"><img width="246" alt="2nd_AutoLayout_2" src="https://user-images.githubusercontent.com/46921003/80296595-93673180-87b7-11ea-91ab-4291c46fa7d5.png">
 
-오토레이아웃 설정 순서 *(사람마다 다른 방법을 따르지만 혼자만의 규칙을 정해놓는게 나중에 헷갈리지 않는다고 한다!)*:
+▶️ 오토레이아웃 설정 순서 *(사람마다 다른 방법을 따르지만 혼자만의 규칙을 정해놓는게 나중에 헷갈리지 않는다고 한다!)*:
 
 1. 각 View의 위, 아래, 양옆 Constraint 걸어주기
 2. 3개 이상의 View를 설정할 때에는 한개의 뷰를 기점으로 Equal Height/Width, Horizontal/Vertical Spacing 설정 해주기
@@ -49,7 +51,7 @@
 
 <img width="230" alt="SOPT_1" src="https://user-images.githubusercontent.com/46921003/81264040-baf1b000-907b-11ea-86c5-883363dbe034.png"><img width="230" alt="SOPT_2" src="https://user-images.githubusercontent.com/46921003/81264121-d9f04200-907b-11ea-9788-686c52c98619.png"><img width="230" alt="SOPT_3" src="https://user-images.githubusercontent.com/46921003/81263842-62221780-907b-11ea-8ee3-1a9e3cffefda.png">
 
-<u>ScrollView 만들기</u>
+<u>▶️ ScrollView 만들기</u>
 
 1. 전체 화면에 Scroll View 배치하기
 

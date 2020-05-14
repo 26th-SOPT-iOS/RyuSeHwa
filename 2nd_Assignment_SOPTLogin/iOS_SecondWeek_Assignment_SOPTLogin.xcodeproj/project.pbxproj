@@ -15,6 +15,9 @@
 		011B7350245AA74600F7A22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011B734E245AA74600F7A22D /* LaunchScreen.storyboard */; };
 		011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B7359245AAD4500F7A22D /* JoinViewController.swift */; };
 		011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B735B245AADB200F7A22D /* LoginViewController.swift */; };
+		0150236524690AE7000D967F /* Conv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150236424690AE7000D967F /* Conv1.swift */; };
+		0150236724692866000D967F /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150236624692866000D967F /* ProfileInformation.swift */; };
+		01502369246C3F79000D967F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01502368246C3F79000D967F /* DetailViewController.swift */; };
 		017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AD4492468261E0068EB11 /* KakaotalkViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		011B7351245AA74600F7A22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011B7359245AAD4500F7A22D /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		011B735B245AADB200F7A22D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0150236424690AE7000D967F /* Conv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conv1.swift; sourceTree = "<group>"; };
+		0150236624692866000D967F /* ProfileInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
+		01502368246C3F79000D967F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		017AD4492468261E0068EB11 /* KakaotalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaotalkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,9 @@
 				011B7359245AAD4500F7A22D /* JoinViewController.swift */,
 				011B735B245AADB200F7A22D /* LoginViewController.swift */,
 				017AD4492468261E0068EB11 /* KakaotalkViewController.swift */,
+				0150236424690AE7000D967F /* Conv1.swift */,
+				0150236624692866000D967F /* ProfileInformation.swift */,
+				01502368246C3F79000D967F /* DetailViewController.swift */,
 			);
 			path = iOS_SecondWeek_Assignment_SOPTLogin;
 			sourceTree = "<group>";
@@ -147,12 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01502369246C3F79000D967F /* DetailViewController.swift in Sources */,
 				011B7348245AA74600F7A22D /* ViewController.swift in Sources */,
 				011B7344245AA74600F7A22D /* AppDelegate.swift in Sources */,
+				0150236724692866000D967F /* ProfileInformation.swift in Sources */,
 				011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */,
 				011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */,
 				017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */,
 				011B7346245AA74600F7A22D /* SceneDelegate.swift in Sources */,
+				0150236524690AE7000D967F /* Conv1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
