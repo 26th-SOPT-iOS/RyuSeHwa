@@ -39,25 +39,9 @@ extension ViewController: UIPickerViewDelegate {  // 뷰의 기능 위임
 
 
 
-<img width="250" alt="Screen Shot 2020-05-11 at 4 13 03 PM" src="https://user-images.githubusercontent.com/46921003/81826813-1e477a80-9573-11ea-86c1-258c582eb6c5.png"><img width="250" alt="Screen Shot 2020-05-13 at 11 39 49 PM" src="https://user-images.githubusercontent.com/46921003/81826870-2dc6c380-9573-11ea-84c0-24f1d709dcbc.png"><img width="250" alt="Screen Shot 2020-05-14 at 12 06 57 AM" src="https://user-images.githubusercontent.com/46921003/81830319-dfb3bf00-9576-11ea-90f1-542e30e1f93d.png">
+<img width="250" alt="Screen Shot 2020-05-11 at 4 13 03 PM" src="https://user-images.githubusercontent.com/46921003/81826813-1e477a80-9573-11ea-86c1-258c582eb6c5.png"><img width="250" alt="Screen Shot 2020-05-13 at 11 39 49 PM" src="https://user-images.githubusercontent.com/46921003/81826870-2dc6c380-9573-11ea-84c0-24f1d709dcbc.png">
 
 
-
-▶️ 프로필 클릭 -> 팝업 창 표시
-
-- 세미나에서 했던 **didSelectRowAt**을 사용해보고 싶어서 TableViewCell을 선택하면 프로필이 열리는 기능을 구현해보았다!
-
-```swift
-extension KakaotalkViewController: UITableViewDelegate { 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let detailViewController = self.storyboard?.instantiateViewController(identifier:
-    "DetailViewController") as? DetailViewController else { return }
-    detailViewController.imageProfile = profileInformations[indexPath.row].profile.getImageName()
-    detailViewController.nameProfile = profileInformations[indexPath.row].name
-    detailViewController.statusProfile = profileInformations[indexPath.row].status
-        self.present(detailViewController, animated: true, completion: nil)
-    }
-```
 
 
 
