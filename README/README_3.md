@@ -67,6 +67,8 @@ extension KakaotalkViewController: UITableViewDelegate {
 
 <img width="300" alt="Screen Shot 2020-05-14 at 11 26 53 AM" src="https://user-images.githubusercontent.com/46921003/81885787-140a9800-95d6-11ea-9af9-bbced5d4542c.png">
 
+친구 행을 swipe해 해당 셀을 삭제할 수 있다. 
+
 > Swipe to Delete
 
 ```swift
@@ -90,5 +92,37 @@ extension KakaotalkViewController: UITableViewDelegate {
 
 
 
-▶️ 도전과제 2: 설정 메뉴 열기 (진행 중)
+▶️ 도전과제 2: ActionSheet 열기
+
+<img width="300" alt="Screen Shot 2020-05-15 at 8 36 41 PM" src="https://user-images.githubusercontent.com/46921003/82048668-034e4500-96f0-11ea-9e1f-ce0e1745da33.png">
+
+상단 우측의 톱니바퀴 버튼을 클릭해 ActionSheet를 열 수 있다. 
+
+> ActionSheet
+
+```swift
+@IBAction func actionSheetButton(_ sender: UIButton) {
+        let alert: UIAlertController
+
+        alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        
+        var cancelAction: UIAlertAction
+        var editFriend: UIAlertAction
+        var editAll: UIAlertAction
+
+        cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: { (action: UIAlertAction) in
+        })
+        editFriend = UIAlertAction(title: "친구 관리", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
+        })
+        editAll = UIAlertAction(title: "전체 설정", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(editFriend)
+        alert.addAction(editAll)
+        self.present(alert,animated: true){
+
+        }
+    }
+```
 

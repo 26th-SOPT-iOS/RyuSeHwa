@@ -13,9 +13,9 @@
 | 1주차 [과제 2](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/1st_Assignment_Login) | SOPT 로그인, 회원가입 UI 구현 & 가입자 정보 데이터 트랜스퍼  | ~4/24 |
 | 2주차 [세미나](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Seminar) | AutoLayout, StackView, ScrollView                            | -     |
 | 2주차 [과제 1](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_Calculator) | StackView를 활용한 계산기                                    | ~5/1  |
-| 2주차 [과제 2](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin) | Zeplin 참고 SOPT 로그인 화면 오토레이아웃 + ScrollView       | ~5/1  |
+| 2주차 [과제 2](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin) | Zeplin 참고 SOPT 로그인 화면 오토레이아웃 + *ScrollView*     | ~5/1  |
 | 3주차 [세미나](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/3rd_Seminar) | Delegate & Protocol, UIPickerVIew, UITableView, UICollectionView | -     |
-| 3주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin) | UITableVIew사용하여 카카오톡 채팅화면 구현하기               | ~5/15 |
+| 3주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin) | UITableVIew사용하여 카카오톡 채팅화면 구현하기 + *Swipe to Delete, UIActionSheet* | ~5/15 |
 |                                                              |                                                              |       |
 
 

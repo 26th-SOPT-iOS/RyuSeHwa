@@ -11,7 +11,6 @@ import UIKit
 class KakaotalkViewController: UIViewController {
 
     private var profileInformations: [ProfileInformation] = []
-    
     @IBOutlet weak var katalkTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +22,15 @@ class KakaotalkViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    private func draw(_ rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        context!.setLineWidth(2.0)
+        context!.setStrokeColor(UIColor.red.cgColor)
+        context?.move(to: CGPoint(x: 0, y: 0))
+        context?.addLine(to: CGPoint(x: 15, y: 15))
+        context!.strokePath()
+    }
+
     private func setProfileInformations() {
         let profile1 = ProfileInformation(profile: .prof1, name: "아요 이솝트", status: " ")
         let profile2 = ProfileInformation(profile: .prof2, name: "안드 김솝트", status: "라랄")
@@ -49,7 +57,15 @@ extension KakaotalkViewController: UITableViewDataSource {
             profileInformations[indexPath.row].profile.getImageName(),
             name: profileInformations[indexPath.row].name,
             status: profileInformations[indexPath.row].status)
-        
+        // line
+//            let separatorView = UIView.init(frame: CGRect(
+//              x: 15,
+//              y: conv1.frame.size.height - 1,
+//              width: conv1.frame.size.width - 30,
+//              height: 1
+//            ))
+//            separatorView.backgroundColor = .systemGray2
+//            conv1.contentView.addSubview(separatorView)
         return conv1
     }
     
@@ -60,12 +76,15 @@ extension KakaotalkViewController: UITableViewDataSource {
         return vw
     }
 }
+    
+    
 
 extension KakaotalkViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
 }
     
+    // Opening profile
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let detailViewController = self.storyboard?.instantiateViewController(identifier:
     "DetailViewController") as? DetailViewController else { return }
@@ -92,6 +111,32 @@ extension KakaotalkViewController: UITableViewDelegate {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+
+    @IBAction func actionSheetButton(_ sender: UIButton) {
+    let alert: UIAlertController
+
+    alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+    
+    var cancelAction: UIAlertAction
+    var editFriend: UIAlertAction
+    var editAll: UIAlertAction
+
+    cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: { (action: UIAlertAction) in
+    })
+    editFriend = UIAlertAction(title: "친구 관리", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
+
+    })
+    
+    editAll = UIAlertAction(title: "전체 설정", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
+    })
+    
+    alert.addAction(cancelAction)
+    alert.addAction(editFriend)
+    alert.addAction(editAll)
+    self.present(alert,animated: true){
+
+    }
+}
 }
 
 
