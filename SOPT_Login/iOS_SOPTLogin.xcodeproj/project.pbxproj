@@ -19,11 +19,7 @@
 		0150236724692866000D967F /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150236624692866000D967F /* ProfileInformation.swift */; };
 		01502369246C3F79000D967F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01502368246C3F79000D967F /* DetailViewController.swift */; };
 		017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AD4492468261E0068EB11 /* KakaotalkViewController.swift */; };
-		017E6129246FBD4C00A85B44 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E6128246FBD4C00A85B44 /* APIConstants.swift */; };
-		017E612B246FBE6E00A85B44 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E612A246FBE6E00A85B44 /* SigninData.swift */; };
-		017E612D246FC59400A85B44 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E612C246FC59400A85B44 /* NetworkResult.swift */; };
-		017E612F246FC64900A85B44 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E612E246FC64900A85B44 /* LoginService.swift */; };
-		017E6132246FD39500A85B44 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E6131246FD39500A85B44 /* SignupData.swift */; };
+		017E6127246FB21000A85B44 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 017E6126246FB21000A85B44 /* Default-568h@2x.png */; };
 		447DE3F0934B91F70857F528 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BC441A362347025DFA1128 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,11 +38,7 @@
 		0150236624692866000D967F /* ProfileInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
 		01502368246C3F79000D967F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		017AD4492468261E0068EB11 /* KakaotalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaotalkViewController.swift; sourceTree = "<group>"; };
-		017E6128246FBD4C00A85B44 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		017E612A246FBE6E00A85B44 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		017E612C246FC59400A85B44 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		017E612E246FC64900A85B44 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		017E6131246FD39500A85B44 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		017E6126246FB21000A85B44 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1A64654AF512D71BDC10C9F0 /* Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig"; path = "Target Support Files/Pods-iOS_SecondWeek_Assignment_SOPTLogin/Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		24BC441A362347025DFA1128 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE872606EDADFD7359282B /* Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig"; path = "Target Support Files/Pods-iOS_SecondWeek_Assignment_SOPTLogin/Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +59,7 @@
 		011B7337245AA74600F7A22D = {
 			isa = PBXGroup;
 			children = (
+				017E6126246FB21000A85B44 /* Default-568h@2x.png */,
 				011B7342245AA74600F7A22D /* iOS_SecondWeek_Assignment_SOPTLogin */,
 				011B7341245AA74600F7A22D /* Products */,
 				E6E56583636C66C982B97844 /* Pods */,
@@ -85,8 +78,6 @@
 		011B7342245AA74600F7A22D /* iOS_SecondWeek_Assignment_SOPTLogin */ = {
 			isa = PBXGroup;
 			children = (
-				017E6133246FD71600A85B44 /* API */,
-				017E6130246FCBE300A85B44 /* NetworkData */,
 				017E6124246FADD600A85B44 /* Resources */,
 				017E6123246FADB400A85B44 /* Sources */,
 				011B7351245AA74600F7A22D /* Info.plist */,
@@ -144,25 +135,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		017E6130246FCBE300A85B44 /* NetworkData */ = {
-			isa = PBXGroup;
-			children = (
-				017E612A246FBE6E00A85B44 /* SigninData.swift */,
-				017E6131246FD39500A85B44 /* SignupData.swift */,
-			);
-			path = NetworkData;
-			sourceTree = "<group>";
-		};
-		017E6133246FD71600A85B44 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				017E6128246FBD4C00A85B44 /* APIConstants.swift */,
-				017E612C246FC59400A85B44 /* NetworkResult.swift */,
-				017E612E246FC64900A85B44 /* LoginService.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		4A84B99999EC05330698B49F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 011B733B245AA74600F7A22D /* Build configuration list for PBXProject "iOS_SecondWeek_Assignment_SOPTLogin" */;
+			buildConfigurationList = 011B733B245AA74600F7A22D /* Build configuration list for PBXProject "iOS_SOPTLogin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				011B7350245AA74600F7A22D /* LaunchScreen.storyboard in Resources */,
+				017E6127246FB21000A85B44 /* Default-568h@2x.png in Resources */,
 				011B734D245AA74600F7A22D /* Assets.xcassets in Resources */,
 				011B734B245AA74600F7A22D /* Main.storyboard in Resources */,
 			);
@@ -296,16 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01502369246C3F79000D967F /* DetailViewController.swift in Sources */,
-				017E6132246FD39500A85B44 /* SignupData.swift in Sources */,
-				017E612F246FC64900A85B44 /* LoginService.swift in Sources */,
 				011B7348245AA74600F7A22D /* ViewController.swift in Sources */,
 				011B7344245AA74600F7A22D /* AppDelegate.swift in Sources */,
-				017E612D246FC59400A85B44 /* NetworkResult.swift in Sources */,
 				0150236724692866000D967F /* ProfileInformation.swift in Sources */,
 				011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */,
 				011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */,
-				017E612B246FBE6E00A85B44 /* SigninData.swift in Sources */,
-				017E6129246FBD4C00A85B44 /* APIConstants.swift in Sources */,
 				017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */,
 				011B7346245AA74600F7A22D /* SceneDelegate.swift in Sources */,
 				0150236524690AE7000D967F /* Conv1.swift in Sources */,
@@ -489,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		011B733B245AA74600F7A22D /* Build configuration list for PBXProject "iOS_SecondWeek_Assignment_SOPTLogin" */ = {
+		011B733B245AA74600F7A22D /* Build configuration list for PBXProject "iOS_SOPTLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				011B7352245AA74600F7A22D /* Debug */,
