@@ -144,7 +144,7 @@ struct LoginService {
 
 
 
-▶️ 로그인 데이터 받아오기 -> **ViewController.swift**
+5️⃣ 로그인 데이터 받아오기 -> **ViewController.swift**
 
 ```swift
 @IBAction func login(_ sender: Any) {
