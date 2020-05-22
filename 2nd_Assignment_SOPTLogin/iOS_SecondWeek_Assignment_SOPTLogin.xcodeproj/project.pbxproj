@@ -14,7 +14,6 @@
 		011B734D245AA74600F7A22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011B734C245AA74600F7A22D /* Assets.xcassets */; };
 		011B7350245AA74600F7A22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011B734E245AA74600F7A22D /* LaunchScreen.storyboard */; };
 		011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B7359245AAD4500F7A22D /* JoinViewController.swift */; };
-		011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B735B245AADB200F7A22D /* LoginViewController.swift */; };
 		0150236524690AE7000D967F /* Conv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150236424690AE7000D967F /* Conv1.swift */; };
 		0150236724692866000D967F /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150236624692866000D967F /* ProfileInformation.swift */; };
 		01502369246C3F79000D967F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01502368246C3F79000D967F /* DetailViewController.swift */; };
@@ -24,6 +23,7 @@
 		017E612D246FC59400A85B44 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E612C246FC59400A85B44 /* NetworkResult.swift */; };
 		017E612F246FC64900A85B44 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E612E246FC64900A85B44 /* LoginService.swift */; };
 		017E6132246FD39500A85B44 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E6131246FD39500A85B44 /* SignupData.swift */; };
+		01D6AD832472987B00FBC206 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AD822472987B00FBC206 /* SignupService.swift */; };
 		447DE3F0934B91F70857F528 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BC441A362347025DFA1128 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,6 @@
 		011B734F245AA74600F7A22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011B7351245AA74600F7A22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011B7359245AAD4500F7A22D /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
-		011B735B245AADB200F7A22D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0150236424690AE7000D967F /* Conv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conv1.swift; sourceTree = "<group>"; };
 		0150236624692866000D967F /* ProfileInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
 		01502368246C3F79000D967F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		017E612C246FC59400A85B44 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		017E612E246FC64900A85B44 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		017E6131246FD39500A85B44 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		01D6AD822472987B00FBC206 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		1A64654AF512D71BDC10C9F0 /* Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig"; path = "Target Support Files/Pods-iOS_SecondWeek_Assignment_SOPTLogin/Pods-iOS_SecondWeek_Assignment_SOPTLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		24BC441A362347025DFA1128 /* Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SecondWeek_Assignment_SOPTLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE872606EDADFD7359282B /* Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig"; path = "Target Support Files/Pods-iOS_SecondWeek_Assignment_SOPTLogin/Pods-iOS_SecondWeek_Assignment_SOPTLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				011B7347245AA74600F7A22D /* ViewController.swift */,
-				011B735B245AADB200F7A22D /* LoginViewController.swift */,
 				011B7359245AAD4500F7A22D /* JoinViewController.swift */,
 				017AD4492468261E0068EB11 /* KakaotalkViewController.swift */,
 				01502368246C3F79000D967F /* DetailViewController.swift */,
@@ -159,6 +158,7 @@
 				017E6128246FBD4C00A85B44 /* APIConstants.swift */,
 				017E612C246FC59400A85B44 /* NetworkResult.swift */,
 				017E612E246FC64900A85B44 /* LoginService.swift */,
+				01D6AD822472987B00FBC206 /* SignupService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -298,12 +298,12 @@
 				01502369246C3F79000D967F /* DetailViewController.swift in Sources */,
 				017E6132246FD39500A85B44 /* SignupData.swift in Sources */,
 				017E612F246FC64900A85B44 /* LoginService.swift in Sources */,
+				01D6AD832472987B00FBC206 /* SignupService.swift in Sources */,
 				011B7348245AA74600F7A22D /* ViewController.swift in Sources */,
 				011B7344245AA74600F7A22D /* AppDelegate.swift in Sources */,
 				017E612D246FC59400A85B44 /* NetworkResult.swift in Sources */,
 				0150236724692866000D967F /* ProfileInformation.swift in Sources */,
 				011B735A245AAD4500F7A22D /* JoinViewController.swift in Sources */,
-				011B735C245AADB200F7A22D /* LoginViewController.swift in Sources */,
 				017E612B246FBE6E00A85B44 /* SigninData.swift in Sources */,
 				017E6129246FBD4C00A85B44 /* APIConstants.swift in Sources */,
 				017AD44A2468261E0068EB11 /* KakaotalkViewController.swift in Sources */,

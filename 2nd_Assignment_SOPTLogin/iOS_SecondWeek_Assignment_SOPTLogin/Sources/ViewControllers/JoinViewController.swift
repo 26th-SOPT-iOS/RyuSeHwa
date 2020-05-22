@@ -17,6 +17,55 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var enterNum: UITextField!
     @IBOutlet var finishButton: [UIButton]!
     
+    @IBAction func signUp(_ sender: Any) {
+        guard let inputID = enterID.text else { return }
+        guard let inputPWD = enterPW.text else { return }
+        guard let inputName = enterName.text else { return }
+        guard let inputEmail = enterEmail.text else { return }
+        guard let inputPhone = enterNum.text else { return }
+        
+        SignupService.shared.Signup(id: inputID, pwd: inputPWD, name: inputName, email: inputEmail, phone: inputPhone) {
+        networkResult in
+        switch networkResult {
+        // 회원가입 성공시
+        case .success:
+            LoginService.shared.login(id: inputID, pwd: inputPWD) {
+            networkResults in
+            switch networkResults{
+                case .success:
+                // 회원가입에 성공했을때
+                guard let receiveViewController = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? ViewController else {return}
+                receiveViewController.id = inputID //id값 넘겨줌
+                receiveViewController.pw = inputPWD //pwd 값 넘겨줌
+                self.navigationController?.show(receiveViewController, sender: self)
+
+            case .requestErr(let message):
+                guard let message = message as? String else {return}
+                let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertViewController.addAction(action)
+                self.present(alertViewController, animated: true, completion: nil)
+                
+            case .pathErr: print("path")
+            case .serverErr: print("serverErr")
+            case .networkFail: print("networkfail")
+                }
+            }
+            case .requestErr(let message):
+                        guard let message = message as? String else {return}
+                        let alertViewController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                        alertViewController.addAction(action)
+                        self.present(alertViewController, animated: true, completion: nil)
+                    case .pathErr: print("path")
+                    case .serverErr: print("serverErr")
+                    case .networkFail: print("networkfail")
+                        
+                    }
+                    
+                }
+            }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,11 +91,11 @@ class JoinViewController: UIViewController {
         enterNum.layer.borderWidth = 1.0
         enterNum.layer.borderColor = UIColor.white.cgColor
         
-        enterID.addLeftPadding2()
-        enterPW.addLeftPadding2()
-        enterName.addLeftPadding2()
-        enterEmail.addLeftPadding2()
-        enterNum.addLeftPadding2()
+        enterID.addLeftSpace2()
+        enterPW.addLeftSpace2()
+        enterName.addLeftSpace2()
+        enterEmail.addLeftSpace2()
+        enterNum.addLeftSpace2()
         
     }
     
@@ -61,9 +110,9 @@ class JoinViewController: UIViewController {
 
 // 텍스트 공간 남기기
 extension UITextField {
-    func addLeftPadding2() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: self.frame.height))
-        self.leftView = paddingView
+    func addLeftSpace2() {
+        let spaceView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: self.frame.height))
+        self.leftView = spaceView
         self.leftViewMode = ViewMode.always
     }
 }

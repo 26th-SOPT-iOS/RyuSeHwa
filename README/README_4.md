@@ -32,6 +32,8 @@
 
 
 
+----
+
 ### 세미나 실습: 로그인 해보기
 
 1️⃣ API 주소 받아오기 -> **APIConstants.swift**
@@ -176,4 +178,15 @@ struct LoginService {
 
 
 
-### 과제: 회원가입 해보기
+6️⃣ Escaping Closure
+
+
+
+----
+
+### 과제: 회원가입 
+
+
+
+![SOPT_4th](https://user-images.githubusercontent.com/46921003/82655617-66465b80-9c5d-11ea-9c92-b37f894a5b18.gif)
+
