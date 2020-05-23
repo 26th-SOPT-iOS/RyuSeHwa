@@ -78,6 +78,8 @@ struct TokenData: Codable {
 
 3️⃣ 서버 통신에 따른 결과 -> **NetworkResult.swift**
 
+다섯가지의 서버 통신 결과를 리턴한다.
+
 ```swift
 // 서버 통신 결과 ==> 성공, 요청에러, 경로에러, 서버내부에러, 네트워크연결실패
 enum NetworkResult<T> {
@@ -144,6 +146,10 @@ struct LoginService {
 
 ```
 
+*<u>***싱글톤 패턴이란?!</u>*
+
+Singleton Pattern은 객체를 하나만 생성하여, 생성된 객체를 **어디서든 참조할 수 있도록 하는 패턴**이다.
+
 
 
 5️⃣ 로그인 데이터 받아오기 -> **ViewController.swift**
@@ -184,9 +190,15 @@ struct LoginService {
 
 ----
 
-### 과제: 회원가입 
+### 과제: 회원가입
 
+▶️ **도전과제 1**: 회원가입 데이터 넘기기
 
+회원가입 성공 후, 입력한 아이디, 비번 값이 로그인 창으로 넘어간다.
 
 ![SOPT_4th](https://user-images.githubusercontent.com/46921003/82655617-66465b80-9c5d-11ea-9c92-b37f894a5b18.gif)
+
+
+
+▶️ **도전과제 2**:  자동로그인 (진행 중)
 
