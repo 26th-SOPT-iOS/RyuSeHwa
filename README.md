@@ -19,7 +19,7 @@
 | 4주차 [세미나](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin/iOS_SecondWeek_Assignment_SOPTLogin) | Cocoapods & Network 통신                                     | -     |
 | 4주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/2nd_Assignment_SOPTLogin/iOS_SecondWeek_Assignment_SOPTLogin) | 회원가입 실습 + *자동로그인*                                 | ~5/22 |
 | 5주차 세미나                                                 | 디자인 + 클라이언트 합동 세미나                              | -     |
-| 5주차 과제                                                   | 디자인 뷰 구현하기                                           | ~5/29 |
+| 5주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/5th_Design_x_iOS) | 디자인 뷰 구현하기                                           | ~5/29 |
 
 
 
