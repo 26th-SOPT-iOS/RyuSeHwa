@@ -15,6 +15,7 @@ class HomeSHVC: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var AdCollectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     @IBOutlet weak var rocketDelivery: UIButton!
     @IBOutlet weak var rocketOverseas: UIButton!
@@ -33,6 +34,7 @@ class HomeSHVC: UIViewController {
     private var rocketList: [RocketSH] = []
     private var todayList: [TodaySH] = []
     private var items: [PopularSH] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,9 @@ class HomeSHVC: UIViewController {
         AdCollectionView.delegate = self
         AdCollectionView.dataSource = self
         AdCollectionView.isPagingEnabled = true
-        AdCollectionView.showsHorizontalScrollIndicator = true
+        AdCollectionView.showsHorizontalScrollIndicator = false
+        pageControl.pageIndicatorTintColor = .white
+        pageControl.currentPageIndicatorTintColor = .mainblue
         
         // CatCollectionView
         setCatList()
@@ -53,6 +57,7 @@ class HomeSHVC: UIViewController {
         CatCollectionView.delegate = self
         CatCollectionView.dataSource = self
         CatCollectionView.isPagingEnabled = true
+        CatCollectionView.showsHorizontalScrollIndicator = false
 
         // RecCollectionView
         setRecList()
@@ -299,6 +304,7 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == self.AdCollectionView) {
+            pageControl.numberOfPages = adImageList.count
             return adImageList.count
         } else if collectionView == self.CatCollectionView {
             return catImageList.count/2
@@ -357,7 +363,31 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
         }
 
 }
-}
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
+    
+//    // PageControl
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let width = scrollView.frame.width -
+//                (scrollView.contentInset.left*2)
+//        let index = scrollView.contentOffset.x / width
+//        let roundedIndex = round(index)
+//        self.pageControl?.currentPage = Int(roundedIndex)
+//        }
+            
+        }
+        
+
 
 extension HomeSHVC: UITableViewDelegate, UITableViewDataSource {
     //section 수
@@ -413,7 +443,7 @@ extension HomeSHVC: UITableViewDelegate, UITableViewDataSource {
                     cell.realTime.image = UIImage(named: "")
                     let section = IndexSet.init(integer: indexPath.section)
                     tableView.reloadSections(section, with: .fade)
-                    heightConstraint.constant = 35
+                    heightConstraint.constant = 38
                     UIView.animate(withDuration: 0.5) {
                         self.view.layoutIfNeeded()
                     }
@@ -437,8 +467,5 @@ extension HomeSHVC: UITableViewDelegate, UITableViewDataSource {
     
     }
     
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
 }
 

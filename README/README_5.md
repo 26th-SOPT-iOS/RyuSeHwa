@@ -143,9 +143,7 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
 
 ▶️ TableView로 Expandable Cell 만들기 (클릭 후 확장되는 기능)
 
-<img width="300" alt="Screen Shot 2020-05-25 at 7 28 31 PM" src="https://user-images.githubusercontent.com/46921003/82804833-f1be2780-9ebd-11ea-8b58-4a7b7e5c9108.png">
-
-
+![Design_실검](https://user-images.githubusercontent.com/46921003/83236241-2851b600-a1ce-11ea-9688-bfb90aad9f82.gif)
 
 1. 검색어 셀, 그리고 펼쳤을 때의 셀 각각 Prototype Cell을 두개를 만들어준 후 identifier를 지정해준다.
 2. didSelectRowAt으로 Row 0를 선택할 때 나타나는 효과들을 지정해준다.
@@ -206,11 +204,53 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
             }
 ```
 
-완성!!!
-
-![Design_실검](https://user-images.githubusercontent.com/46921003/83236241-2851b600-a1ce-11ea-9688-bfb90aad9f82.gif)
 
 
+▶️ CollectionView에서 PageControl
+
+> pageControl 선언 후 설정
+
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+  pageControl.pageIndicatorTintColor = .white
+  pageControl.currentPageIndicatorTintColor = .mainblue
+}
+
+extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == self.AdCollectionView) {
+          // CollectionView 페이지 수만큼 pageControl 추가
+            pageControl.numberOfPages = adImageList.count
+            return adImageList.count
+        } else if collectionView == self.CatCollectionView {
+            return catImageList.count/2
+        } else if collectionView == self.RecCollectionView {
+            return recList.count
+        } else if collectionView == self.RocketCollectionView {
+            return rocketList.count
+        } else {
+            return todayList.count
+        }
+    }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+        
+```
+
+
+
+▶️ 완성!!!
+
+![May-29-2020 21-34-22](https://user-images.githubusercontent.com/46921003/83260142-387c8c00-a1f4-11ea-9941-cf2f5a051880.gif)
 
 
 
