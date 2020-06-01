@@ -8,6 +8,8 @@
 
 
 
+
+
 ▶️ 홈 화면에서는:
 
 1. 쿠팡 홈 화면 기존의 **조잡함을 보완**하고 (로켓배송, 로켓직구, 로켓 프레쉬의 쉬운 구분)
@@ -29,23 +31,32 @@
 
 ----
 
+
+
 ### 세미나 과제: 쿠팡 홈 화면 View 구현해오기
 
 나는 세미나와 과제에서 비교적 접해볼 기회가 없었던 CollectionView를 사용해볼 수 있는 **홈 화면을 구현**해보기로 했다. 
 
-우리 조 개발자 분들과 이야기를 나눠본 결과, 홈 화면 구현은 다음과 같은 순서를 따른다.
+
+
+🌟🌟 홈 화면 구현은 다음과 같은 순서를 따른다.
 
 1. 메인 Tabbar 생성 후 각 bar 별로 VC, View 생성
+   1. *합칠 때 충돌이 나지 않기 위해 각각 스토리보드 생성*
 2. 메인 Tabbar의 홈 아이콘에 홈 View 연결
 3. ScrollView 구현
 4. CollectionView 3개 구현
-   - 검색창 밑의 광고 슬러이더
+   - 검색창 밑의 광고 슬라이더
    - 광고 슬라이더 밑의 카테고리 슬라이더
    - 추천상품 목록
+5. TableView 1개 구현
+   1. 실시간 검색어 (prototype cell 두개 생성)
 
 
 
-*개발자 분들과의 협업은 처음이라 헷갈리는 부분이 많았지만 우리 팀 OB 주혁오빠가 매우 친절하게 github을 사용한 협업에 관해 손수 [readme까지](https://github.com/SOPT26-iOS-X-Design/iOS-Design-Project) 만들어 설명해주셨다!!*
+*협업은 처음이라 헷갈리는 부분이 많았지만 우리 팀 OB 주혁오빠가 매우 친절하게 github을 사용한 협업에 관해 손수 [readme까지](https://github.com/SOPT26-iOS-X-Design/iOS-Design-Project) 만들어 설명해주셨다!!*
+
+
 
 
 
@@ -78,7 +89,8 @@ override func viewDidLoad() {
         let image = UIImage(named: "iconTopSearch")
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
-
+  
+  			// View를 만들어 image의 위치 지정해주기
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         view.addSubview(imageView)
         searchField.leftViewMode = UITextField.ViewMode.always
@@ -116,7 +128,7 @@ private func setAdsView() {
 
 
 
-> 두개의 행으로 이루어져있는 CollectionView 만들기
+> 두개의 row로 이루어져있는 CollectionView 만들기
 
 ```swift
 extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -141,16 +153,50 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
 
 
 
+🔥 **중요**: CollectionView를 사용할 때는 Interface Builder에서 꼭 꼭 **Collection View Cell Size를 custom**으로 설정해준다! Automatic으로 설정이 돼있을 시 xcode에서 임의로 cell size를 지정해주기 때문에 코드로 작업을 할때 어떤 코드는 반영이 되고 어떤 코드는 안된다 ㅠ *~~(이것 때문에 알 수 없는 에러가 생겨서 엄청 오래 고생했었다 ㅠㅠ)~~*
+
+
+
 ▶️ TableView로 Expandable Cell 만들기 (클릭 후 확장되는 기능)
 
 ![Design_실검](https://user-images.githubusercontent.com/46921003/83236241-2851b600-a1ce-11ea-9688-bfb90aad9f82.gif)
 
 1. 검색어 셀, 그리고 펼쳤을 때의 셀 각각 Prototype Cell을 두개를 만들어준 후 identifier를 지정해준다.
-2. didSelectRowAt으로 Row 0를 선택할 때 나타나는 효과들을 지정해준다.
+2. didSelectRowAt으로 Row 0를 선택할 때 나타나는 해당 효과들을 지정해줘야 한다.
    - '고구마'를 삭제해준다
    - '10분전 업데이트' 텍스트를 추가해준다
    - 밑으로 내리는 버튼을 위로 올리는 버튼 이미지로 바꿔준다
    - TableView 전체 height를 늘려준다
+
+
+
+> tableView 구조체에 'open'이라는 변수를 추가해준 후 '닫힘' 상태가 default로 되게 설정했다.
+
+```swift
+// Cell 내에서 동적으로 변해야 하는 변수들 선언
+struct PopularSH {
+    var product: String
+    var arrowImg: UIImage?
+    var titleProduct: String
+    var rankNumber: String
+    var update: String
+    var realTime: UIImage?
+    var open = false
+
+
+    init(Product: String, arrowImg: String, titleProduct: String, rankNumber: String, update: String, realTime: String) {
+        self.product = Product
+        self.arrowImg = UIImage(named: arrowImg)
+        self.titleProduct = titleProduct
+        self.rankNumber = rankNumber
+        self.update = update
+        self.realTime = UIImage(named: realTime)
+}
+```
+
+
+
+> Cell이 선택(open = true가) 되고 다시 선택(open = false)일 때의 행동 정의
 
 ```swift
 // cell구현
@@ -166,7 +212,7 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
         }
     }
 
-// cell 확장효과
+		// cell 확장효과
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? PopularTitleCellSH else {return}
         guard let index = tableView.indexPath(for: cell) else { return }
@@ -202,6 +248,36 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
                     }
                 }
             }
+```
+
+
+
+> 뷰의 height나 width를 동적으로 바꾸기 위해서는 contraint를 변수로 선언 해준 후 코드에 추가한다!
+>
+> Animation Duration을 조정해 얼마나 셀이 열리고 닫히는지를 조정할 수 있다.
+
+```swift
+@IBOutlet weak var heightConstraint: NSLayoutConstraint!
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  // true(cell이 펼쳐질 때)의 height
+  heightConstraint.constant = 170
+  if index.row == indexPath.row {
+            if index.row == 0 {
+                if items[indexPath.section].open == true {
+                    items[indexPath.section].open = false
+                    cell.arrowImg.image = UIImage(named: "iconRealtimeDown")
+                    cell.productLabel.text = ""
+                    cell.rankNumber.text = ""
+                    cell.update.text = "10분전 업데이트"
+                    cell.realTime.image = UIImage(named: "")
+                    let section = IndexSet.init(integer: indexPath.section)
+                    tableView.reloadSections(section, with: .fade)
+                  // false (cell이 닫혔을 때)의 height
+                    heightConstraint.constant = 35
+                    UIView.animate(withDuration: 0.5) {
+                        self.view.layoutIfNeeded()
+                    }
 ```
 
 
@@ -244,6 +320,22 @@ extension HomeSHVC: UICollectionViewDataSource, UICollectionViewDelegate {
         pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
         
+```
+
+
+
+🔥 뷰 안의 컬렉션뷰를 스크롤에 따라 넘길 때 모든 pageControl이 같이 넘어가는 오류가 발생했었다!
+
+-> 꼭 각 collectionView를 pageControl에 연결해줘야함!!
+
+```swift
+func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+  if scrollView == self.AdCollectionView {
+    pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+  } else if scrollView == self.CatCollectionView {
+    pageControl2?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+  }
+}
 ```
 
 
