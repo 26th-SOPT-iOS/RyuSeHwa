@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location1VC-->
+        <scene sceneID="dy5-Wq-HCw">
+            <objects>
+                <viewController storyboardIdentifier="Location1VC" id="cnh-L8-znU" customClass="Location1VC" customModule="iOS_Soptkathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGA-Ae-nhk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="245" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-gx-Cgt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LocationCellSE" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCellSE" id="lMx-Ia-Nq5" customClass="LocationCellSE" customModule="iOS_Soptkathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="245"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lMx-Ia-Nq5" id="87z-52-OAh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-N4-I7d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행지 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI1-1D-OTw">
+                                                    <rect key="frame" x="138.5" y="104" width="137" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행지 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymh-t4-zAL">
+                                                    <rect key="frame" x="168" y="145" width="78" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FiE-N4-I7d" firstAttribute="top" secondItem="87z-52-OAh" secondAttribute="top" id="1bM-dz-Vdz"/>
+                                                <constraint firstItem="zI1-1D-OTw" firstAttribute="top" secondItem="87z-52-OAh" secondAttribute="topMargin" constant="77" id="fPc-xy-Ge0"/>
+                                                <constraint firstItem="Ymh-t4-zAL" firstAttribute="centerX" secondItem="87z-52-OAh" secondAttribute="centerX" id="fhu-8y-of9"/>
+                                                <constraint firstItem="FiE-N4-I7d" firstAttribute="leading" secondItem="87z-52-OAh" secondAttribute="leading" id="oVn-7S-b3W"/>
+                                                <constraint firstAttribute="trailing" secondItem="FiE-N4-I7d" secondAttribute="trailing" id="vDe-hD-NfX"/>
+                                                <constraint firstAttribute="bottom" secondItem="FiE-N4-I7d" secondAttribute="bottom" id="wcm-Lf-X4M"/>
+                                                <constraint firstItem="Ymh-t4-zAL" firstAttribute="top" secondItem="zI1-1D-OTw" secondAttribute="bottom" constant="5" id="xOB-5w-FIi"/>
+                                                <constraint firstItem="zI1-1D-OTw" firstAttribute="centerX" secondItem="87z-52-OAh" secondAttribute="centerX" id="zit-Lu-fLO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="engLabel" destination="Ymh-t4-zAL" id="7uM-Mu-cZ8"/>
+                                            <outlet property="locationImageView" destination="FiE-N4-I7d" id="gNx-Pl-qaO"/>
+                                            <outlet property="nameLabel" destination="zI1-1D-OTw" id="OjR-KE-tl7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lrj-gx-Cgt" firstAttribute="top" secondItem="RGA-Ae-nhk" secondAttribute="top" id="KFu-AK-hOv"/>
+                            <constraint firstItem="Lrj-gx-Cgt" firstAttribute="leading" secondItem="9jm-g0-PcB" secondAttribute="leading" id="NWE-FM-WlV"/>
+                            <constraint firstItem="9jm-g0-PcB" firstAttribute="trailing" secondItem="Lrj-gx-Cgt" secondAttribute="trailing" id="cfq-vd-Ru2"/>
+                            <constraint firstItem="9jm-g0-PcB" firstAttribute="bottom" secondItem="Lrj-gx-Cgt" secondAttribute="bottom" id="mLJ-0B-qP9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9jm-g0-PcB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bVS-du-889"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lrj-gx-Cgt" id="Lb9-Uc-Zqr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Omz-yn-yKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="129"/>
+        </scene>
+    </scenes>
+</document>

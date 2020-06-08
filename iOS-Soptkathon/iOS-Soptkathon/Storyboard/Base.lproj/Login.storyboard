@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="iOS_Soptkathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginImg" translatesAutoresizingMaskIntoConstraints="NO" id="DDE-mG-944">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="아이디 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1z-em-SZ1">
+                                <rect key="frame" x="57.5" y="615" width="299" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="3Dt-8g-4Pa"/>
+                                    <constraint firstAttribute="height" constant="60" id="VIK-wt-IRL"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-IV-o6F">
+                                <rect key="frame" x="57.5" y="680" width="299" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="Nk0-1m-tpu"/>
+                                    <constraint firstAttribute="height" constant="62" id="cMV-PU-6zy"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXd-gS-E93">
+                                <rect key="frame" x="57.5" y="747" width="299" height="63"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="ns7-XZ-oz5"/>
+                                    <constraint firstAttribute="height" constant="63" id="o36-1o-l9b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snr-mV-4dr"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KjL-Ew-evi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DDE-mG-944" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C6P-2D-u1y"/>
+                            <constraint firstItem="mXd-gS-E93" firstAttribute="top" secondItem="lpv-IV-o6F" secondAttribute="bottom" constant="5" id="IiU-iC-fe9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DDE-mG-944" secondAttribute="trailing" id="J3S-GY-7nU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DDE-mG-944" secondAttribute="bottom" id="Jzg-aX-xjS"/>
+                            <constraint firstItem="P1z-em-SZ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="571" id="T3X-8w-GGR"/>
+                            <constraint firstItem="DDE-mG-944" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="byB-n8-jAT"/>
+                            <constraint firstItem="P1z-em-SZ1" firstAttribute="centerX" secondItem="DDE-mG-944" secondAttribute="centerX" id="enJ-rp-pUl"/>
+                            <constraint firstItem="lpv-IV-o6F" firstAttribute="centerX" secondItem="DDE-mG-944" secondAttribute="centerX" id="fgC-ot-o3p"/>
+                            <constraint firstItem="mXd-gS-E93" firstAttribute="centerX" secondItem="DDE-mG-944" secondAttribute="centerX" id="fpu-Tl-GA0"/>
+                            <constraint firstItem="lpv-IV-o6F" firstAttribute="top" secondItem="P1z-em-SZ1" secondAttribute="bottom" constant="5" id="z0W-EW-4qd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wPK-En-wMC"/>
+                    <connections>
+                        <outlet property="idText" destination="P1z-em-SZ1" id="VRe-rz-yIR"/>
+                        <outlet property="pwText" destination="lpv-IV-o6F" id="GHg-X1-gnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868.115942028986" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginImg" width="414.5" height="896"/>
+    </resources>
+</document>

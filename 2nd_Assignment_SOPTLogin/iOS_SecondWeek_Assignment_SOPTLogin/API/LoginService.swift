@@ -13,7 +13,8 @@ struct LoginService {
     static let shared = LoginService()
     
     // Request Body에 들어갈 파라미터 생성
-    private func makeParameter(_ id: String, _ pwd: String) -> Parameters { return ["id": id, "password": pwd]
+    private func makeParameter(_ id: String, _ pwd: String) -> Parameters {
+        return ["id": id, "password": pwd]
     }
 
     func login(id: String, pwd: String, completion: @escaping (NetworkResult<Any>) -> Void) {
@@ -31,7 +32,9 @@ struct LoginService {
                 let networkResult = self.judge(by: statusCode, value)
                 completion(networkResult)
             case .failure: completion(.networkFail)
-            } }
+            }
+            
+        }
     }
     
     // statusCode에 따라 분기 실행

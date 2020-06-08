@@ -1,0 +1,28 @@
+//
+//  UIImageView+Extension.swift
+//  iOS-Design-Project
+//
+//  Created by 이주혁 on 2020/06/03.
+//  Copyright © 2020 이주혁. All rights reserved.
+//
+
+import Foundation
+
+import UIKit
+import Kingfisher
+
+// Kingfisher를 이용하여 url로부터 이미지를 가져오는 extension
+extension UIImageView {
+    public func imageFromUrl(_ urlString: String?, defaultImgPath : String) {
+        let defaultImg = UIImage(named: defaultImgPath)
+        if let url = urlString {
+            if url.isEmpty {
+                self.image = defaultImg
+            } else {
+                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))])
+            }
+        } else {
+            self.image = defaultImg
+        }
+    }
+}
