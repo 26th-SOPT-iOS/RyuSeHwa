@@ -21,8 +21,8 @@
 | 5주차 세미나                                                 | 디자인 + 클라이언트 합동 세미나                              | -       |
 | 5주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/5th_Design_x_iOS) | 디자인 뷰 구현하기                                           | ~5/29   |
 | 6주차 세미나                                                 | 서버 + 클라이언트 합동 세미나                                | -       |
-| 6주차 과제                                                   | 뷰 서버와 연결하기                                           | ~6/13   |
-| 솝커톤                                                       | 쉼표 - 사운즈 여행, 당신의 방을 여행 공간으로                | 6/6-6/7 |
+| 6주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/6th_Server_x_iOS) | 뷰 서버와 연결하기                                           | ~6/13   |
+| [솝커톤](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/iOS-Soptkathon) | 쉼표 - 사운즈 여행, 당신의 방을 여행 공간으로                | 6/6-6/7 |
 
 
 
