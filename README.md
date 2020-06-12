@@ -40,7 +40,7 @@
 
 #### [👉🏻 Week 5 (5/23)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/README_5.md)
 
-#### 👉🏻 [Week 6 (5/30)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/READ_ME_6.md)
+#### 👉🏻 [Week 6 (5/30)]()
 
 #### 👉🏻 [SOPT-Ka-thon: 쉼표](https://github.com/soptkathon/soptkathon-client/blob/yangjaeuk/README.md)
 
