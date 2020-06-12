@@ -10,45 +10,49 @@ import Foundation
 import Alamofire
 import Kingfisher
 
+var toggle: Bool = true
 struct IDServiceSH {
     // Singleton
     static let idService = IDServiceSH()
 
     func getImage(completion: @escaping (NetworkResult<Any>) -> Void) {
+        toggle = true
+
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
-        let dataRequest = Alamofire.request(APIConstants.itemsURL, method: .get, encoding: JSONEncoding.default, headers: header)
+        // function to get image
+        let dataRequest = Alamofire.request(APIConstants.itemsURL, headers: header)
         
         dataRequest.responseData { dataResponse in
         switch dataResponse.result {
-        // 회원가입 성공
-        case .success:
-            print("success")
-        // 회원가입 실패
-        case .failure:
-            completion(.networkFail)
-            }
+        case .success :
+            guard let statusCode = dataResponse.response?.statusCode else {return}
+            guard let value = dataResponse.result.value else {return}
+            let networkResult = self.judge(by: statusCode,value)
+            completion(networkResult)
+        case .failure : completion(.networkFail)
+        }
             
         }
         
     }
     
-//    func getTrending(completion: @escaping (NetworkResult<Any>) -> Void) {
-//        //let header: HTTPHeaders = ["Content-Type": "application/json"]
-//        let dataRequest = Alamofire.request(APIConstants.searchURL)
-//
-//        dataRequest.responseData { dataResponse in
-//            switch dataResponse.result {
-//            case .success:
-//                //guard let statusCode = dataResponse.response?.statusCode else { return }
-//                guard let value = dataResponse.result.value else { return }
-//                let networkResult = self.judge(by: statusCode, value)
-//                completion(networkResult)
-//            case .failure:
-//                completion(.networkFail)
-//                }
-//            }
-//        }
+    // function to get 인기검색어
+    func getTrending(completion: @escaping (NetworkResult<Any>) -> Void) {
+        toggle = false
+        let dataRequest = Alamofire.request(APIConstants.searchURL)
+
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success :
+                guard let statusCode = dataResponse.response?.statusCode else {return}
+                guard let value = dataResponse.result.value else {return}
+                let networkResult = self.judge(by: statusCode,value)
+                completion(networkResult)
+            case .failure : completion(.networkFail)
+            }
+            }
+        }
     
     private func judge(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
@@ -59,14 +63,17 @@ struct IDServiceSH {
         }
     }
 
-    private func isProduct(by data: Data) -> NetworkResult<Any> {
+    private func isProduct(by data:Data) ->NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try?
-            decoder.decode(trendingDataSH.self, from: data) else {
-                return .pathErr }
-        guard let productData: [trendingData] = decodedData.data else {
-            return .requestErr(decodedData.message) }
-        return .success(productData)
+        if toggle {
+            guard let decodedData = try? decoder.decode(imageDataSH.self, from: data) else { return .pathErr }
+            return .success(decodedData.data)
+
+        }
+        else {
+            guard let decodedData = try? decoder.decode(trendingDataSH.self, from: data) else { return .pathErr }
+            return .success(decodedData.data)
+        }
     }
     
 

@@ -24,6 +24,7 @@
 		019FBC5E247EC8BA00A3FB2B /* RecCellSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FBC5D247EC8BA00A3FB2B /* RecCellSH.swift */; };
 		01B126162487C77A00FD0BE1 /* IDServiceSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B126152487C77A00FD0BE1 /* IDServiceSH.swift */; };
 		01C3F22D2480A9C2000FE197 /* PopularTitleCellSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3F22C2480A9C2000FE197 /* PopularTitleCellSH.swift */; };
+		01CD3DEC2490BB1D00275B20 /* imageDataSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3DEB2490BB1D00275B20 /* imageDataSH.swift */; };
 		5E3F4754A87AAED83496088C /* Pods_iOS_Design_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0F648DD8311A44E00A50AA /* Pods_iOS_Design_Project.framework */; };
 		7F03AF052484EB35001353EF /* ShoppingBascketFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F03AF042484EB35001353EF /* ShoppingBascketFooterView.swift */; };
 		7F03AF072484F700001353EF /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F03AF062484F700001353EF /* UITabBar+Extension.swift */; };
@@ -92,6 +93,7 @@
 		019FBC5D247EC8BA00A3FB2B /* RecCellSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecCellSH.swift; path = "iOS-Design-Project/Source/ViewControllers/RecCellSH.swift"; sourceTree = SOURCE_ROOT; };
 		01B126152487C77A00FD0BE1 /* IDServiceSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDServiceSH.swift; sourceTree = "<group>"; };
 		01C3F22C2480A9C2000FE197 /* PopularTitleCellSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTitleCellSH.swift; sourceTree = "<group>"; };
+		01CD3DEB2490BB1D00275B20 /* imageDataSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDataSH.swift; sourceTree = "<group>"; };
 		4C0F648DD8311A44E00A50AA /* Pods_iOS_Design_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Design_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F03AF042484EB35001353EF /* ShoppingBascketFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBascketFooterView.swift; sourceTree = "<group>"; };
 		7F03AF062484F700001353EF /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				016F48B824893D88001F5512 /* trendingDataSH.swift */,
+				01CD3DEB2490BB1D00275B20 /* imageDataSH.swift */,
 			);
 			path = NetworkData;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				019FBC58247E329800A3FB2B /* CatCellSH.swift in Sources */,
 				010A5CAC247FEC300081CD0B /* RocketSH.swift in Sources */,
 				7F79F773247E6E4600B9FC56 /* NormalPurchaseCell.swift in Sources */,
+				01CD3DEC2490BB1D00275B20 /* imageDataSH.swift in Sources */,
 				DA683CAF247D365400693333 /* BannerView.swift in Sources */,
 				7FA31E0E24838A240069625D /* ShoppingBasketHeaderView.swift in Sources */,
 				DA683CB5247E2AB900693333 /* CategoryCollectionViewCell.swift in Sources */,

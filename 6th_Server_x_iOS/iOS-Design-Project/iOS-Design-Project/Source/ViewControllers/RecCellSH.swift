@@ -19,13 +19,13 @@ class RecCellSH: UICollectionViewCell {
     @IBOutlet weak var rocketFresh: UIImageView!
     @IBOutlet weak var rocketDelivery: UIImageView!
     
-    func set(_ recInformation: RecSH) {
-        productImage.image = recInformation.imageName
-        productName.text = recInformation.productName
-        productPrice.text = recInformation.price
-        rocketWow.image = recInformation.rWow
-        rocketFresh.image = recInformation.rFresh
-        rocketDelivery.image = recInformation.rDeliver
-    }
+//    func set(_ recInformation: RecSH) {
+//        productImage.image = recInformation.imageName
+//        productName.text = recInformation.productName
+//        productPrice.text = recInformation.price
+//        rocketWow.image = recInformation.rWow
+//        rocketFresh.image = recInformation.rFresh
+//        rocketDelivery.image = recInformation.rDeliver
+//    }
     
 }

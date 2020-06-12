@@ -13,7 +13,7 @@ class AdCellSH: UICollectionViewCell {
     
     @IBOutlet weak var adImageView: UIImageView!
     
-    func set(_ adsInformation: AdsSH) {
-        adImageView.image = adsInformation.imageName
-    }
+//    func set(_ adsInformation: AdsSH) {
+//        adImageView.image = adsInformation.imageName
+//    }
 }

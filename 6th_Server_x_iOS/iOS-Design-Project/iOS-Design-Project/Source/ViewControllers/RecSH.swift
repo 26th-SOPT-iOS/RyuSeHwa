@@ -7,21 +7,25 @@
 //
 
 import UIKit
+import Foundation
 // 변수가 세개인 추천상품 구조체 생성
+
 struct RecSH {
-    var imageName: UIImage?
-    var productName: String
-    var price: String
-    var rWow: UIImage?
-    var rFresh: UIImage?
-    var rDeliver: UIImage?
-
-    init(imageName: String, productName: String, price: String, rWow: String, rFresh: String, rDeliver: String) {
-        self.imageName = UIImage(named: imageName)
-        self.productName = productName
-        self.price = price
-        self.rWow = UIImage(named:rWow)
-        self.rFresh = UIImage(named: rFresh)
-        self.rDeliver = UIImage(named:rDeliver)
-
-} }
+    var productImageName: URL
+    var ProductName:String
+    var ProductPrice:String
+    var rocket: Bool
+    var fresh: Bool
+    var delivery: Bool
+    
+    init (imagename:URL, name:String,price:Int, rocket: Bool ,fresh: Bool, delivery: Bool){
+        self.productImageName = imagename
+        self.ProductName = name
+        self.ProductPrice = String(price)
+        self.rocket = rocket
+        self.fresh = fresh
+        self.delivery = delivery
+    
+    }
+}
+        

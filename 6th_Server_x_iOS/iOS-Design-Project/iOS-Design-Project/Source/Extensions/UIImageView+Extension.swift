@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-// Kingfisher를 이용하여 url로부터 이미지를 가져오는 extension
+ //Kingfisher를 이용하여 url로부터 이미지를 가져오는 extension
 extension UIImageView {
     public func imageFromUrl(_ urlString: String?, defaultImgPath : String) {
         let defaultImg = UIImage(named: defaultImgPath)
