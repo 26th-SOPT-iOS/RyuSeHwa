@@ -23,6 +23,7 @@
 | 6주차 세미나                                                 | 서버 + 클라이언트 합동 세미나                                | -       |
 | 6주차 [과제](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/6th_Server_x_iOS) | 뷰 서버와 연결하기                                           | ~6/13   |
 | [솝커톤](https://github.com/26th-SOPT-iOS/RyuSeHwa/tree/master/iOS-Soptkathon) | 쉼표 - 사운즈 여행, 당신의 방을 여행 공간으로                | 6/6-6/7 |
+| 7주차 세미나                                                 | 이미지 업로드 & 다운로드                                     | -       |
 
 
 
@@ -40,7 +41,7 @@
 
 #### [👉🏻 Week 5 (5/23)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/README_5.md)
 
-#### 👉🏻 [Week 6 (5/30)]()
+#### 👉🏻 [Week 6 (5/30)](https://github.com/26th-SOPT-iOS/RyuSeHwa/blob/master/README/READ_ME_6.md)
 
 #### 👉🏻 [SOPT-Ka-thon: 쉼표](https://github.com/soptkathon/soptkathon-client/blob/yangjaeuk/README.md)
 

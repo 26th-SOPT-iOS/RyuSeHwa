@@ -270,35 +270,16 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
             if productURLInformation[indexPath.row].delivery == true {
                 recCell.rocketDelivery.image = UIImage(named: "badgeRoketwow")
             }
+    
 ```
-
-
-
-> URL을 이미지 값으로 쉽게 변환시켜주는 함수이다!
->
-> DispatchQueue에 대한 설명은 밑에서~
-
-```swift
-extension UIImageView {
-    func setImage(path:URL) {
-       let url = path
-        DispatchQueue.global(qos: .background).async {
-            guard let data:Data = try? Data(contentsOf: url), let image:UIImage = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self.image = image
-            }
-        }
-    }
-}
-```
-
-
 
 > 엄청 애먹었던 부분 🔥🔥
 >
-> 서버도 잘 통신이 되고 데이터도 잘 넘어오는데 컬렉션 뷰가 로드가 되지 않아 엄청 헤맸었다... (한 세시간 정도 ㅠ)
+> 서버도 잘 통신이 되고 데이터도 잘 넘어오는데 컬렉션 뷰 자체가 로드가 되지 않아 엄청 헤맸었다... (한 세시간 정도 ㅠ)
 >
-> DispatchQueue...? Async..?
+> viewDidLoad에 아래의 코드를 추가해주니 정상적으로 뷰가 로드 됐다!
+>
+> DispatchQueue...? Async..? 뭐지..?
 >
 > 데이터 로딩 같은 무거운 작업을 실행하는 순간 어플리케이션의 UI는 느려지거나 멈추게 된다고 한다. 동시성(Concurrency)은 2개 이상의 일(task)를 "동시에" 수행할 수 있도록 해준다!! 밑의 함수는 뷰에 이런 동시성을 부여해준다. 자세한 설명은 이 [블로그에](https://wlaxhrl.tistory.com/81) 잘 나와있다. 
 
